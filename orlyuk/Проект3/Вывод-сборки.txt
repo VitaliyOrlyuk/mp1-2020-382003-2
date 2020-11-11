@@ -1,0 +1,8 @@
+﻿1>------ Сборка начата: проект: Проект3, Конфигурация: Debug Win32 ------
+1>  Source1.c
+1>c:\users\admin\documents\visual studio 2015\projects\проект3\проект3\source1.c(67): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"
+1>c:\users\admin\documents\visual studio 2015\projects\проект3\проект3\source1.c(72): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"
+1>c:\users\admin\documents\visual studio 2015\projects\проект3\проект3\source1.c(76): warning C4047: =: "int" отличается по уровням косвенного обращения от "int *"
+1>  Проект3.vcxproj -> C:\Users\Admin\documents\visual studio 2015\Projects\Проект3\Debug\Проект3.exe
+1>  Проект3.vcxproj -> C:\Users\Admin\documents\visual studio 2015\Projects\Проект3\Debug\Проект3.pdb (Partial PDB)
+========== Сборка: успешно: 1, с ошибками: 0, без изменений: 0, пропущено: 0 ==========
