@@ -56,24 +56,36 @@ void InsertSort(int B[], int n)
 }
 void Merge(int *B, int left, int right)
 {
-	int mid, pos1, pos2, i, *A;
-	A = (int*)malloc(sizeof(int)*10);
+	int mid, pos1, pos2, pos3, i, *A;
+	A = (int*)malloc(sizeof(int) * 10);
 	mid = (left + right) / 2;
-	pos1 = left; //начало левой части массива
-	pos2 = mid + 1; //начало правой части массива
-	for (i = left; i <= right; i++) 
-		if ((pos1 <= mid) && ((pos2>right) || (B[pos1]<B[pos2])))
+	{
+		pos1 = left;
+		pos2 = mid + 1;
+		pos3 = 1;
+	}
+	while ((pos1 <= mid) && (pos2 <= right))
+	{
+		if (B[pos1] < B[pos2])
 		{
-			A[i] = B[pos1];
+			A[pos3] = B[pos1];
 			pos1++;
 		}
 		else
 		{
-			A[i] = B[pos2];
+			A[pos3] = B[pos2];
 			pos2++;
 		}
-	for (i = left; i <= right; i++) B[i] = A[i];
-	free(A);
+		pos3++;
+	}
+	while (pos2 <= right)
+	{
+		A[pos3] = B[pos2];
+		pos2++;
+		pos3++;
+	}
+	for (i = 1; i < pos3 - 1; i++)
+		B[left + i - 1] = A[i];
 };
 
 void MergeSort(int *B, int left, int right)
