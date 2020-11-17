@@ -59,8 +59,8 @@ void Merge(int *B, int left, int right)
 	int mid, pos1, pos2, i, *A;
 	A = (int*)malloc(sizeof(int)*10);
 	mid = (left + right) / 2;
-	pos1 = left; //начало левой части
-	pos2 = mid + 1; //начало правой части
+	pos1 = left; //начало левой части массива
+	pos2 = mid + 1; //начало правой части массива
 	for (i = left; i <= right; i++) 
 		if ((pos1 <= mid) && ((pos2>right) || (B[pos1]<B[pos2])))
 		{
