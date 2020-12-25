@@ -31,6 +31,7 @@ void main()
 			printf("%3d", mas2[i][j]);
 		printf("\n");
 	}
+
 	for (i = 0; i < n; i++) 
 	{
 		free(mas2[i]);
